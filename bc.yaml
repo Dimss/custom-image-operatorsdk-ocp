@@ -15,6 +15,6 @@ spec:
   output:
     to:
       kind: "DockerImage"
-      name: "docker.io/dimssss/ansible-operatorsdk-builder:0.1"
+      name: "docker.io/dimssss/ansible-operatorsdk-builder:0.2"
     pushSecret:
       name: "docker-hub-dimssss"
