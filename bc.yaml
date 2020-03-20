@@ -1,0 +1,20 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "operatorsdk-custom-image"
+spec:
+  runPolicy: "Serial"
+  source:
+    git:
+      uri: "https://github.com/Dimss/custom-image-operatorsdk-ocp"
+  strategy:
+    dockerStrategy:
+      from:
+        kind: "DockerImage"
+        name: "quay.io/buildah/stable"
+  output:
+    to:
+      kind: "DockerImage"
+      name: "docker.io/dimssss/ansible-operatorsdk-builder:latest"
+    pushSecret:
+      name: "docker-hub-dimssss"
