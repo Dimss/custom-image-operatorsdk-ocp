@@ -10,3 +10,4 @@ SRC_DIR=$(pwd)/src
 
 # Clone the source code
 git clone ${SOURCE_URI} ${SRC_DIR}
+sleep 3600
